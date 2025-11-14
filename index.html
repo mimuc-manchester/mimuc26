@@ -1,60 +1,209 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MIMUC 2026</title>
-<style>
-body {
-  background-color: #f7f6ff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  color: #2f2952;
-  margin: 0;
-  padding-top: 100px;
-}
-h1 {
-  font-size: 2.8em;
-  margin-bottom: 0.3em;
-}
-p {
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.5;
-  font-size: 1.1em;
-  padding: 0 20px;
-}
-button {
-  background-color: #8a7df0;
-  border: none;
-  color: white;
-  padding: 12px 26px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 25px;
-}
-button:hover {
-  background-color: #7a6de0;
-}
-footer {
-  margin-top: 80px;
-  font-size: 0.9em;
-  color: #777;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIMUC 2026</title>
+  <style>
+    /* Clean, simple, slightly sharper version */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fffdf5;
+      --ink: #2d2b38;
+      --muted: #5d5c68;
+      --accent: #8a7df0;
+      --link: #1a4a8d;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 45px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .lede {
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    /* Sticky nav with sharper spacing */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #f3f2f7;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      z-index: 50;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: var(--radius);
+      transition: background 0.15s;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: #e8e7ff;
+    }
+
+    nav a.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 0.6rem;
+      font-weight: 650;
+    }
+
+    p, li {
+      font-size: 1.02rem;
+      color: var(--muted);
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 11px 20px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #796ce0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 65px;
+      padding: 24px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    /* Scroll offset for sticky nav */
+    section { scroll-margin-top: 70px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Manchester Undergraduate Mathematics Conference 2026</h1>
+    <p class="lede">A simple, clean one-page site for the conference. Tabs link to sections further down.</p>
+  </header>
 
-<h1>Manchester Interdisciplinary Mathematics Undergraduate Conference 2026</h1>
-<p>A student-led conference, by undergraduates, for undergraduates</p>
+  <nav>
+    <div class="tabs">
+      <a href="#about" class="tab">About</a>
+      <a href="#programme" class="tab">Programme</a>
+      <a href="#venue" class="tab">Venue</a>
+      <a href="#register" class="tab">Register</a>
+    </div>
+  </nav>
 
-<button onclick="alert('Registration will open soon!')">Register Interest</button>
+  <section id="about">
+    <h2>About</h2>
+    <p>MIMUC is a friendly, student-led mathematics conference for undergraduates across pure, applied, and statistics. Talks are short, posters are welcome, and first-time presenters are encouraged.</p>
+  </section>
 
-<footer>
-  © Manchester Interdisciplinary Mathematics Undergraduate Conference 2026
-</footer>
+  <section id="programme">
+    <h2>Programme</h2>
+    <ul>
+      <li>Welcome + keynote</li>
+      <li>Lightning talks</li>
+      <li>Poster session</li>
+      <li>Panel: pathways into research</li>
+    </ul>
 
+    <h2 style="margin-top: 1.6rem;">Key Dates</h2>
+    <ul>
+      <li>CFP opens — <strong>1 Dec 2025</strong></li>
+      <li>Submission deadline — <strong>11 Jan 2026</strong></li>
+      <li>Decisions released — <strong>26 Jan 2026</strong></li>
+      <li>Conference — <strong>14 Jun 2026</strong></li>
+    </ul>
+  </section>
 
+  <section id="venue">
+    <h2>Venue</h2>
+    <p>The Alan Turing Building, University of Manchester. Fully accessible with step-free access and a nearby quiet room.</p>
+  </section>
+
+  <section id="register" style="text-align:center">
+    <h2>Register</h2>
+    <p>Registration and abstract submission will be available soon.</p>
+    <a class="btn" href="#">Register interest</a>
+  </section>
+
+  <footer>
+    © <span id="year"></span> MIMUC (Undergraduate Conference)
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const tabs = document.querySelectorAll('.tab');
+    const sections = Array.from(tabs).map(t => document.querySelector(t.getAttribute('href')));
+
+    window.addEventListener('scroll', () => {
+      let idx = sections.length;
+      while (--idx >= 0) {
+        const box = sections[idx].getBoundingClientRect();
+        if (box.top <= 80) {
+          tabs.forEach(t => t.classList.remove('active'));
+          tabs[idx].classList.add('active');
+          break;
+        }
+      }
+    });
+  </script>
 </body>
 </html>
