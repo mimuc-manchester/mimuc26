@@ -5,6 +5,8 @@ Roman Galperin is now resposible for the 2027 website
 
 # MIMUC Website
 
+**The mimuc26 repo should simply be edited to create the future year webpages - do NOT create a new repo for e.g. mimuc28** - the mimuc.org.uk domain points at this repo and it's annoying to move it. 
+
 This website is intentionally kept as a **simple static holding page**.
 
 It is built using **plain HTML + CSS + Bootstrap**, with **no build system, no framework, and no backend**.  
