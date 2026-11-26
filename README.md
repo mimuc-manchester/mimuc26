@@ -1,6 +1,6 @@
 # MIMUC 2027
 
-I already had a chat with Roman Galperin and he seemed keen to takeover the website for 2027
+Roman Galperin is now resposible for the 2027 website
 
 
 # MIMUC Website
@@ -87,20 +87,20 @@ You will need to go figure out how to remove the file from the repository histor
 
 ## How to Update the Site
 
-Do **not** edit the main repository directly.
+Previously we used forks but this seems unnecessary - just work directly on a local copy of main and open index.html locally before pushing.
+
+Make sure you have an authenticator like "git gh" so you can push changes. On Mac use "brew install gh" followed by "gh auth login". On Linux use "sudo apt install gh" followed by "gh auth login".
 
 ### Workflow:
 
-1. Fork the repository to your own GitHub account  
-2. Clone your fork locally  
-3. Create a new branch:
-   git checkout -b your-feature-name
-3. Make your changes  
+1. Clone a local copy: git clone https://github.com/mimuc-manchester/mimuc26.git
+2. Make small changes to one section of index.html (or other files/add images)
+3. Open index.html on your laptop to verify the changes work/look good  
 4. Commit and push:
   - git add path/to/modified/file
+  - git status
   - git commit -m "Describe your changes"
-  - git push origin your-feature-name
-5. Open a Pull Request to the main MIMUC repository  
+  - git push origin main
 
 Do **not** do "git add ." - it's a recipe for bad things to happen.
 
@@ -131,17 +131,15 @@ This ensures changes remain controlled, readable, and easy to review.
 
 ---
 
-## Approval Process
+## Past webmasters
 
-All changes must be approved before merging.
+Current webmaster is Roman Galperin
 
-If you are unsure or something is blocked contact:
+Past webmasters:
 
-Harvey Williams  
+Harvey Williams  (**I own the mimuc.org.uk domain**)
 hw562@cantab.ac.uk  
 [harveywilliams.com](https://www.harveywilliams.com)
-
-I've set the domain to autorenew at approx £15 - pls reimburse me in 2027 🙏
 
 ---
 
